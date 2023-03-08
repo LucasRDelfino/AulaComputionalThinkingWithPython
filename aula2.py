@@ -1,5 +1,5 @@
 #EX1
-""" v1 = float(input("Digite o valor do amaciante"))
+v1 = float(input("Digite o valor do amaciante"))
 
 desc = float(input("Digite o valor do desconto"))
 
@@ -28,7 +28,7 @@ a2=b2;
 b2 = q;
 
 print(xa,xb)
-print(a2,b2) """
+print(a2,b2) 
 
 #EX4
 
