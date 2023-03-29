@@ -1,5 +1,5 @@
 
-# EX1
+# # EX1
 i = 1
 soma = 0
 while i<=10 :
@@ -9,7 +9,7 @@ while i<=10 :
 
 
 
-# EX2
+# # EX2
 i = 1
 while i<=5:
     n = int(input("Digite um número"))
@@ -21,7 +21,7 @@ while i<=5:
 
 
 
-# EX3  
+# # EX3  
 verificacao = input ("Você quer verificar se a letra é vogal ou consoante? 1.Sim 2.Não")
 if verificacao =="1" or verificacao == "sim" or verificacao == "Sim":
     letra = input(f'Digite uma letra(escreva "sair" para parar o programa):') 
@@ -36,7 +36,7 @@ if verificacao =="1" or verificacao == "sim" or verificacao == "Sim":
 else : 
     print("Bobão")
 
-# EX4
+# # EX4
 verificacao = False;
 i = 0;
 while verificacao==False : 
@@ -59,13 +59,17 @@ senha = "1234"
 user = input ("Digite o seu usuario")
 password = input ("Digite a senha")
 i = 0
-while (usuario!=user and password!=senha) and i<=2 :
+while (usuario!=user and password!=senha) and i<=1 :
       print ("Acesso negado")
       user = input ("Digite o seu usuario")
       password = input ("Digite a senha")
       i+=1
     
-if i==2:     
+if i!=2:     
    print("Acesso concedido")
+
+else : 
+   print("Máximo de tentativas excedido")
+
 
 
