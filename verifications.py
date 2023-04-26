@@ -9,7 +9,7 @@
 # resposta = int(resposta)
 # print ("ACERTOUUUUU")
 
-
+#EX2
 resposta = input ("Você quer usar a calculadora s/n")
 
 while resposta!="s" and resposta!="n" :
