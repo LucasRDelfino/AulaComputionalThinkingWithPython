@@ -29,7 +29,7 @@ def selection_sort_ruim(lista):
     return lista
 
 
-def selection_sort_medio(lista) :
+def bubble_sort(lista) :
     for j in range(len(lista)):
         n_trocas = 0
         for i in range(len(lista)-j-1):
@@ -43,21 +43,56 @@ def selection_sort_medio(lista) :
             break
     return lista
 
-def binary_search_sqrt(num):
+def binary_search_sqrt(num, precisao):
     inicio = 0
     fim = num
     chute = (inicio+fim)/2
     qtd = 0
-    while abs(chute**2 - num) >= 0.001:
+    while abs(chute**2 - num) >= precisao:
         if chute**2 > num:
             fim = chute
         else:
             inicio = chute
         qtd+=1
         chute = (inicio+fim)/2
-    print(chute,chute**2,num,qtd)
-    return
+    return chute, qtd
 
-binary_search_sqrt(25)
+def binary_search_sqrt_recursiva(num, precisao , inicio , fim):
+    chute = (inicio+fim)/2
+    if abs(chute**2 - num) >= precisao:
+        if chute**2 > num:
+            fim = chute
+        else:
+            inicio = chute
+        return binary_search_sqrt_recursiva(num, precisao, inicio, fim)
+    return chute
+
+def busca_binaria(lista, num, inicio, fim):
+    chute = (inicio+fim)//2
+    if lista[chute]==num:
+        return chute
+    if lista[chute]>num:
+        fim = chute
+        return busca_binaria(lista,num,inicio,fim)
+    else:
+        inicio = chute
+        return busca_binaria(lista,num,inicio,fim)
+
+def quick_sort(lista):
+    if len(lista)<=1:
+        return lista
+    else:
+        pivo = lista[0]
+        menores = [elem for elem in lista if elem < pivo]
+        maiores = [elem for elem in lista if elem > pivo]
+        menores_ordenados = quick_sort(menores)
+        maiores_ordenados = quick_sort(maiores)
+        return menores_ordenados + [pivo] + maiores_ordenados
+
+lista = [1,2,3,5,6,7,8,9]
+
+print(busca_binaria(lista,9,0,8))
+
+
 
 
